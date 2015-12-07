@@ -10,8 +10,4 @@
 - 
   title: Plugins
   children:
-    - paths  
-    - json_graph    
-    - data_sources    
-    - router    
-    - model  
+    - 
