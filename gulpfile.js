@@ -28,18 +28,18 @@ gulp.task('compile-less', function () {
 	});
 	
   return gulp.src(['./less/falcor-site.less', './less/*.less'])
-    .pipe(sourcemaps.init())
-		.pipe(lessProcessor)
-		.pipe(autoprefixer({
-			browsers: [
-				'> 1%',
-				'last 2 versions',
-				'ie >= 9'
-			]
-		}))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./stylesheets'))
-		.pipe(browserSync.stream());
+    		 .pipe(sourcemaps.init())
+			 .pipe(lessProcessor)
+			 .pipe(autoprefixer({
+			 	browsers: [
+			 		'> 1%',
+			 		'last 2 versions',
+			 		'ie >= 9'
+			 	]
+			 }))
+    		 .pipe(sourcemaps.write('.'))
+    		 .pipe(gulp.dest('./stylesheets'))
+			 .pipe(browserSync.stream());
 });
 
 // Instead of waiting for jekyll to rebuild, compile
@@ -48,14 +48,14 @@ gulp.task('compile-less', function () {
 gulp.task('less', ['compile-less'], function () {
 	browserSync.notify('Reloading CSS');
 	return gulp.src('./stylesheets/*')
-		.pipe(gulp.dest('_site/stylesheets'));
+			   .pipe(gulp.dest('_site/stylesheets'));
 });
 
 gulp.task('js', function () {
 	return gulp.src('./javascripts/bootstrap-modified.js')
-    .pipe(uglify())
-    .pipe(rename('bootstrap-modified.min.js'))
-		.pipe(gulp.dest('./javascripts'));
+    		   .pipe(uglify())
+    		   .pipe(rename('bootstrap-modified.min.js'))
+			   .pipe(gulp.dest('./javascripts'));
 });
 
 var buildJekyllSite = function (complete) {
@@ -86,15 +86,15 @@ gulp.task('less-watch', ['less'], function () {
 gulp.task('serve', ['build-all'], function () {
 	browserSync.init({
 		server: {
-			// baseDir is required but we only want routes starting with /falcor
+			// baseDir is required but we only want routes starting with /nebula
 			// to work so it's as close to real gh-pages hosting as possible to
 			// simplify local testing
 			baseDir: '.',
 			routes: {
-				'/falcor': '_site',
+				'/nebula': '_site',
 			}
 		},
-		startPath: '/falcor'
+		startPath: '/nebula'
 	});
 	gulp.watch('./less/**/*.less', ['less-watch']);
 	// Just rebuild the jekyll site to speed things up, and also because

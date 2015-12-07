@@ -1,3 +1,3 @@
-### Bind to the Cloud
+### Nebula Feature #3
 
-Falcor automatically traverses references in your graph and makes requests as needed. Falcor transparently handles all network communications, opportunistically batching and de-duping requests.
+One more awesome FTW

@@ -1,4 +1,4 @@
-baseurl: "/falcor"
+baseurl: "/nebula"
 exclude: 
   - "less"
   - "node_modules"
@@ -9,7 +9,7 @@ kramdown:
   toc_levels: 1..2
 # Default sitewide metadata
 meta_defaults:
-  description: "A JavaScript library for efficient data fetching."
-  title: "One Model Everywhere"
-  # All titles (including the default) will have this prepended to them
-  title_prefix: "Falcor: "  
+  description: "A collection of Gradle plugins for building software the Netflix way."
+  # TODO Update this nebula tagline
+  title: "Netflix build awesomeness"
+  title_prefix: "Nebula: "  

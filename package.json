@@ -1,7 +1,7 @@
 {
-  "name": "falcor-website",
+  "name": "nebula-website",
   "version": "0.1.0",
-  "description": "The official website for Netflix's Falcor project",
+  "description": "The official website for Netflix's Nebula Plugins project",
   "main": "index.html",
   "directories": {
     "doc": "doc"
@@ -11,18 +11,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Netflix/falcor"
+    "url": "https://github.com/nebula-plugins"
   },
   "keywords": [
     "netflix",
     "falcor"
   ],
-  "author": "The Falcor Team",
+  "author": "The Nebula Team",
   "license": "Apache License 2.0",
   "bugs": {
-    "url": "https://github.com/Netflix/falcor/issues"
+    "url": "https://github.com/nebula-plugins/nebula-plugins.github.io/issues"
   },
-  "homepage": "https://github.com/Netflix/falcor",
+  "homepage": "https://github.com/nebula-plugins/nebula-plugins.github.io",
   "devDependencies": {
     "bootstrap": "^3.3.5",
     "browser-sync": "^2.8.0",
