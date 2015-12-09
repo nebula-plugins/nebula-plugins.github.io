@@ -1,13 +1,17 @@
 # Main site top navigation menu
 -
   # First level menu items with submenus have title and children
-  title: Introduction
+  title: Overview
   children:
-    # each child is an id, which should be set in the page's front matter,
-    # and uniquely identifies that page of the site. Presumably the child
-    # pages will be in the same directory, but that's not required.
     - what_is_nebula
+    - nebula_roadmap
 - 
   title: Plugins
   children:
-    - 
+    - java_dependency_management
+    - os_packaging
+    - version_and_release_management
+    - language_packs
+    - gradle_plugin_development
+    - miscellaneous
+    - deprecated

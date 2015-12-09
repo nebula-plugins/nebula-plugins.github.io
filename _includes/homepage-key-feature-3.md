@@ -1,3 +1,3 @@
-### Nebula Feature #3
+### Version & Release Management
 
-One more awesome FTW
+Nebula adds a number of plugins to assist with the integration with version control systems, as well as publishing and release management for Java applications.
