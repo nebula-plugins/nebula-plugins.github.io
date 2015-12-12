@@ -1,17 +1,14 @@
 # Main site top navigation menu
 -
   # First level menu items with submenus have title and children
-  title: Overview
+  title: Getting Started
+  id: overview
+-
+  title: Tour of Nebula
+  id: plugin_overview
+-
+  title: Plugin Guides
   children:
-    - what_is_nebula
-    - nebula_roadmap
-- 
-  title: Plugins
-  children:
-    - java_dependency_management
-    - os_packaging
-    - version_and_release_management
-    - language_packs
-    - gradle_plugin_development
-    - miscellaneous
-    - deprecated
+    - gradle_dependency_lock
+    - nebula_dependency_recommender
+    - gradle_resolution_rules

@@ -9,8 +9,7 @@ apply plugin: 'java'
 apply plugin: 'web'
 apply plugin: 'application'
 
-version = "1.0.0"
-mainClassName = "com.netflix.sampleApp.Application"
+mainClassName = 'com.netflix.sampleApp.Application'
 ~~~
 
 Gradle provides a lot of functionality out of the box. For instance, the above build.gradle file allows you to:
@@ -36,7 +35,6 @@ apply plugin: 'nebula.sources-jar'
 apply plugin: 'nebula.release'
 apply plugin: 'nebula.bintray'
 
-version = '1.0.0'
 mainClassName = 'com.netflix.sampleApp.Application'
 
 contacts {
@@ -59,5 +57,5 @@ In addition to previous mentioned features provided by Gradle, the Nebula plugin
 - adds tasks to bump the major, minor or patch version based on [Semantic Versioning](http://semver.org/)
 - the major/minor/patch release can be published to Bintray
 
-
+Checkout our [Getting Started guide]({{ site.baseurl }}/documentation/overview.html) to learn more.
 

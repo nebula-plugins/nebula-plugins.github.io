@@ -17,3 +17,7 @@
 ---
 
 {% include homepage-getting-started.md %}
+
+---
+
+{% include homepage-next-steps.md %}
