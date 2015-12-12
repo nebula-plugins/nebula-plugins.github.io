@@ -1,1 +1,1 @@
-The Netflix build system
+A collection of Gradle plugins, built by Netflix

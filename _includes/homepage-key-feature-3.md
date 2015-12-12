@@ -1,3 +1,3 @@
-### Version & Release Management
+### Eliminate boilerplate
 
-Nebula adds a number of plugins to assist with the integration with version control systems, as well as publishing and release management for Java applications.
+Nebula helps engineers remove boilerplate in your Gradle build file, and makes doing the right thing easy. This reduces the cognitive load put on enterprise engineers, allowing them to just focus on writing code.
