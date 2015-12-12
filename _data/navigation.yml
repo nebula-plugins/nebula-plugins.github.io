@@ -1,14 +1,17 @@
 # Main site top navigation menu
 -
-  # First level menu items with submenus have title and children
-  title: Getting Started
+  title: Overview
   id: overview
 -
-  title: Tour of Nebula
-  id: plugin_overview
--
-  title: Plugin Guides
+  title: Guides
   children:
     - gradle_dependency_lock
     - nebula_dependency_recommender
     - gradle_resolution_rules
+-
+  title: Videos
+  children:
+    - gradle_summit_2014_jryan
+    - gr8conf_2015_rspieldenner
+    - gradle_summit_2015_dthomas
+    - gradle_summit_2015_rspieldenner
