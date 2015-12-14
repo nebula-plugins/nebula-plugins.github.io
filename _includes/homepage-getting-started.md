@@ -57,5 +57,5 @@ In addition to previous mentioned features provided by Gradle, the Nebula plugin
 - adds tasks to bump the major, minor or patch version based on [Semantic Versioning](http://semver.org/)
 - the major/minor/patch release can be published to Bintray
 
-Checkout our [Getting Started guide]({{ site.baseurl }}/documentation/overview.html) to learn more.
+You can start by checking out our [Introduction to Nebula]({{ site.baseurl }}/documentation/introduction_to_nebula.html).
 

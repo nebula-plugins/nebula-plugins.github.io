@@ -1,13 +1,38 @@
 # Main site top navigation menu
 -
   title: Overview
-  id: overview
+  children:
+    - introduction_to_nebula
+    - getting_started
+    - plugin_overview
 -
-  title: Guides
+  title: Plugins
   children:
     - gradle_dependency_lock
     - nebula_dependency_recommender
     - gradle_resolution_rules
+    - gradle_ospackage
+    - nebula_ospackage
+    - nebula_publishing
+    - nebula_release
+    - gradle_scm
+    - gradle_git_scm
+    - gradle_stash
+    - nebula_bintray
+    - nebula_project
+    - gradle_metrics
+    - gradle_contacts
+    - gradle_info
+    - nebula_core
+    - gradle_aggregate_javadocs
+    - gradle_extra_configurations
+    - gradle_override
+    - nebula_clojure
+-
+  title: Guides
+  children:
+    - contribution_guide
+    - plugin_development_guide
 -
   title: Videos
   children:
