@@ -14,7 +14,7 @@ Nebula is a collection of plugins built on top of Gradle. You will need to under
 
 We publish all Nebula plugins to [Bintray](https://bintray.com/nebula/gradle-plugins), as well as the [Gradle Plugin portal](https://plugins.gradle.org/). Since we publish to the Gradle Plugin portal, including a Nebula plugin into your Gradle build is as easy as adding a single line to your `build.gradle` file:
 
-~~~groovy
+~~~output
 apply plugin: 'nebula.dependency-lock'
 ~~~
 
@@ -60,32 +60,40 @@ Check out the [gradle-contacts-plugin page]({{ site.baseurl }}/plugins/gradle_co
 
 ## For individual projects
 
-While Nebula was built to tackle enterprise scale dependency issues at Netflix, many of the plugins are useful to standalone Java projects.
+While Nebula was built to tackle build issues at Netflix, many of the plugins are useful to standalone Java projects.
 
 #### I want to ensure that previous versions of my code build with the exact same dependencies
 
-dependency-lock
+In order to ensure that previous versions of your application have repeatable builds, you need to ensure that your transitive dependency graph is exactly the same. In order to do this, we created the [gradle-dependency-lock-plugin]({{ site.baseurl }}/plugins/gradle_dependency_lock.html), that will generate a `dependencies.lock` file and check that into version control. The plugin will also ensure that the locked versions are forced during a build.
+
+Check out the [gradle-dependency-lock-plugin page]({{ site.baseurl }}/plugins/gradle_dependency_lock.html) for details on how to use it.
 
 #### I want to use semantic versioning for my Java project
 
-nebula-release
+Gradle allows you to define a version number, but doesn't provide intelligence around how to easily manage a project's version. We built the [nebula-release-plugin]({{ site.baseurl }}/plugins/nebula_release.html) to allow us to manage releases of our software, using [Semantic Versioning](http://semver.org/).
+
+Check out the [nebula-release-plugin page]({{ site.baseurl }}/plugins/nebula_release.html) for details on how to use it.
 
 #### I want to publish my Java library to a Maven (or Ivy) repository
 
-nebula-publishing
+Recent versions of Gradle allow you to publish to a Maven or Ivy repository. Unfortunately, there is a fair amount of boilerplate required to do a simple publish. We created the [nebula-publishing-plugin]({{ site.baseurl }}/plugins/nebula_publishing.html) to address much of this boilerplate and make it easy to publish a Java library.
 
-#### I want to publish my Java library to Bintray
-
-nebula-bintray
+Check out the [nebula-publishing-plugin page]({{ site.baseurl }}/plugins/nebula_publishing.html) for details on how to use it.
 
 #### I want to manage my Atlassian Stash project during a build
 
-gradle-stash
+Being able to manage pull requests, branches or build statuses within Atlassian Stash. In order to simplify these tasks within a Gradle build, we built the [gradle-stash-plugin]({{ site.baseurl }}/plugins/gradle_stash.html). 
+
+Check out the [gradle-stash-plugin page]({{ site.baseurl }}/plugins/gradle_stash.html) for details on how to use it.
 
 #### I want all the Javadocs from my multi-module project to be aggregated
 
-aggregate-javadoc
+If you have a multi-module project and you would like to publish all of the javadocs as a single site or zip, then you can [gradle-aggregate-javadoc-plugin]({{ site.baseurl }}/plugins/gradle_aggregate_javadoc.html). 
+
+Check out the [gradle-aggregate-javadoc-plugin page]({{ site.baseurl }}/plugins/gradle_aggregate_javadoc.html) for details on how to use it.
 
 #### I want to override certain build properties from the command-line
 
-override-plugin
+Every once in a while, the need arises to set a value inside a Gradle build from the command line. Gradle currently does not allow you to do this. We built the [gradle-override-plugin]({{ site.baseurl }}/plugins/gradle_override.html) that will allow you to set any property in the Gradle build.
+
+Check out the [gradle-override-plugin page]({{ site.baseurl }}/plugins/gradle_override.html) for details on how to use it.

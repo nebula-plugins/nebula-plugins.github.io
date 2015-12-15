@@ -1,5 +1,3 @@
 ### Repeatable builds
 
-Netflix has added a number of key features to better manage dependencies for the JVM. These features are built on top of
-Gradle's existing dependency management facilities, which include locking your dependency graph, simplifying enterprise 
-wide dependency resolution rules and producing Maven BOMs.
+Going back to a previous commit of your code and building it from source doesn’t guarantee exactly the same result. Your transitive dependency graph can change in subtle ways, even if you are careful to pin your dependencies. Nebula can help you lock your resolved dependency graph into source control quickly and easily.
