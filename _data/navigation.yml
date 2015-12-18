@@ -4,6 +4,7 @@
   children:
     - introduction_to_nebula
     - getting_started
+    - plugin_overview
 -
   title: Plugins
   children:
