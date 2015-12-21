@@ -9,3 +9,5 @@ lang: en
 {:toc}
 
 # Nebula Dependency Recommender Plugin
+
+## What is a BOM file?
