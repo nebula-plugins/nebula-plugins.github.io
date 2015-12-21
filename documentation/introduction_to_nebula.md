@@ -31,11 +31,11 @@ Nebula was created by [Justin Ryan](https://twitter.com/quidryan) at Netflix. Yo
 
 To best understand the origins of Nebula, we should start with Netflix's build needs. Netflix migrated to the AWS a few years ago, and converted our previously monolithic Java application into microservices. Much of Netflix OSS represents the byproduct of our cloud, microservice migration.
 
-### How deployments affect builds
+### How deployments affects builds
 
 Early in our migration to the cloud, we decided to lean heavily on the [Immutable Server pattern](http://martinfowler.com/bliki/ImmutableServer.html). Every deployment we make to our services means that we "bake" a new Amazon Machine Image, or AMI. We built and open sourced [Aminator](https://github.com/Netflix/aminator), a python library that can take an RPM or DEB and create an AMI. 
 
-In order to make it easy for engineering teams at Netflix to turn their services into DEBs, we created the [gradle-ospackage-plugin]({{ site.baseurl }}/plugins/gradle_ospackage.html).
+In order to make it easy for engineering teams at Netflix to turn their services into DEBs, we created the [gradle-ospackage-plugin](https://github.com/nebula-plugins/gradle-ospackage-plugin).
 
 ### How IPC affects builds
 
@@ -46,7 +46,7 @@ There are however a wealth of challenges that this approach creates:
 - a client's transitive dependency graph can upgrade dependencies on the consuming service unintentionally
 - if a bad client jar is published, all consumers need to pin back to a known good version
 
-Most of these issues are can be classified as Java dependency management issues. We have written a number of plugins to help improve this story for engineers, including the [gradle-dependencylock-plugin]({{ site.baseurl }}/plugins/gradle_dependency_lock.html), [nebula-dependency-recommender-plugin]({{ site.baseurl }}/plugins/nebula_dependency_recommender.html) and the [gradle-resolution-rules-plugin]({{ site.baseurl }}/plugins/gradle_resolution_rules.html). 
+Most of these issues are can be classified as Java dependency management issues. We have written a number of plugins to help improve this story for engineers, including the [gradle-dependencylock-plugin](https://github.com/nebula-plugins/gradle-dependency-lock-plugin), [nebula-dependency-recommender-plugin](https://github.com/nebula-plugins/nebula-dependency-recommender-plugin) and the [gradle-resolution-rules-plugin](https://github.com/nebula-plugins/gradle-resolution-rules-plugin). 
 
 ## The Nebula Team
 
