@@ -6,7 +6,7 @@ In order to understand the value that Nebula provides, let's look at a Gradle bu
 
 ~~~output
 apply plugin: 'java'
-apply plugin: 'web'
+apply plugin: 'war'
 apply plugin: 'application'
 
 mainClassName = 'com.netflix.sampleApp.Application'
@@ -24,7 +24,7 @@ Now, let's sprinkle in some Nebula plugin goodness and see what additional benef
 
 ~~~output
 apply plugin: 'java'
-apply plugin: 'web'
+apply plugin: 'war'
 apply plugin: 'application'
 apply plugin: 'nebula.project-plugin'
 apply plugin: 'nebula.dependency-lock'
