@@ -9,7 +9,6 @@
   title: Guides
   children:
     - contribution_guide
-    - plugin_development_guide
 -
   title: Videos
   children:

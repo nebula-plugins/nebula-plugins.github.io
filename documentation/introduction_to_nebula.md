@@ -57,7 +57,3 @@ Nebula is actively developed and maintained by the Netflix Build Tools team, whi
 - [Jon Schneider](https://twitter.com/jon_k_schneider) (Senior Software Engineer)
 - [Danny Thomas](https://twitter.com/dannythomas) (Senior Software Engineer)
 - [Nadav Cohen](https://twitter.com/nadavc) (Senior Software Engineer)
-
-## The future of Nebula
-
-coming soon...
