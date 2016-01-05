@@ -163,4 +163,4 @@ The [gradle-webpack-plugin](https://github.com/nebula-plugins/gradle-webpack-plu
 The [gradle-blacklist-plugin](https://github.com/nebula-plugins/gradle-blacklist-plugin) was the predecessor to the [gradle-resolution-rules-plugin](https://github.com/nebula-plugins/gradle-resolution-rules-plugin). Since the gradle-blacklist-plugin was only able to impact a single project at a time, it's value was limited. We recommend using the [gradle-resolution-rules-plugin](https://github.com/nebula-plugins/gradle-resolution-rules-plugin) instead. 
 
 ### nebula-blob-plugin
-The [nebula-blob-plugin](https://github.com/nebula-plugins/nebula-blob-plugin) was a small experimental plugin of limited value we no longer plan to support it. 
+The [nebula-blob-plugin](https://github.com/nebula-plugins/nebula-blob-plugin) was a small experimental plugin of limited value we no longer plan to support. 
