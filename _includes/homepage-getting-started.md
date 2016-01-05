@@ -1,6 +1,6 @@
 ## Built for the Enterprise
 
-Nebula is a collection of Gradle plugins, built for Netflix engineers to help eliminate boilerplate build logic and to provide sane conventions. We chose Gradle for our underlying build system because we felt it was best build tool for Java applications.
+Nebula is a collection of Gradle plugins built for Netflix engineers to eliminate boilerplate build logic and provide sane conventions. We chose Gradle for our underlying build system because we feel Gradle is the best build tool for Java applications.
 
 In order to understand the value that Nebula provides, let's look at a Gradle build file for a typical Java web project.
 
@@ -45,16 +45,17 @@ contacts {
 }
 ~~~
 
-In addition to the previously mentioned features provided by Gradle, the Nebula plugins we added allow us to:
+In addition to previous mentioned features provided by Gradle, the Nebula plugins we added allow this project to:
 
 - define contact information for the project
-- capture and write metadata about the project into the .war's manifest
+- metadata about the project is now captured and written into the .war's manifest
 - produce `.jar` files for Javadocs as well as Java source files
 - produce and commit to version control a `dependency.lock` file containing the complete transitive dependency graph as resolved by Gradle
-- produce a `.deb` (or `.rpm`) file configured to use [daemontools](http://www.daemon-tools.cc/downloads#1Page) for starting and stopping the application.
+- produce a `.deb` (or `.rpm`) file configured to use [daemontools](https://cr.yp.to/daemontools.html) for starting and stopping the application.
 - publish the `.war` (or `.jar`) to a maven repository
 - publish a `*-javadoc.jar` and a `*-sources.jar` to a maven repository
 - add tasks to bump the major, minor or patch version based on [Semantic Versioning](http://semver.org/)
-- publish the major/minor/patch release to Bintray
+- the major/minor/patch release can be published to Bintray
 
-Check out our [Introduction to Nebula]({{ site.baseurl }}/documentation/introduction_to_nebula.html) to get started.   
+You can start by checking out our [Introduction to Nebula]({{ site.baseurl }}/documentation/introduction_to_nebula.html).
+
