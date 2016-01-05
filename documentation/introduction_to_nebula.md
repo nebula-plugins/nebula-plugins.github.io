@@ -19,9 +19,9 @@ Prior to Nebula, Netflix software was built using an [Ant](http://ant.apache.org
 We began looking for a build tool that:
  
 - enabled testability
-- first class support for Java applications
-- a rich community and ecosystem
-- enabled us vastly simplify build files
+- provided first class support for Java applications
+- had a rich community and ecosystem
+- allowed us to vastly simplify build files
 
 The team began to look around the industry for alternative build systems and decided that Gradle was the best solution for Netflix. The results of our conversion to Gradle is Nebula.
 
@@ -33,7 +33,7 @@ To best understand the origins of Nebula, we should start with Netflix's build n
 
 ### How deployments affects builds
 
-Early in our migration to the cloud, we decided to lean heavily on the [Immutable Server pattern](http://martinfowler.com/bliki/ImmutableServer.html). Every deployment we make to our services means that we "bake" a new Amazon Machine Image, or AMI. We built and open sourced [Aminator](https://github.com/Netflix/aminator), a python library that can take an RPM or DEB and create an AMI. 
+Early in our migration to the cloud, we decided to lean heavily on the [Immutable Server pattern](http://martinfowler.com/bliki/ImmutableServer.html). Every deployment we make to our services means that we "bake" a new Amazon Machine Image, or AMI. We built and open sourced [Aminator](https://github.com/Netflix/aminator), a Python library that can take an RPM or DEB and create an AMI. 
 
 In order to make it easy for engineering teams at Netflix to turn their services into DEBs, we created the [gradle-ospackage-plugin](https://github.com/nebula-plugins/gradle-ospackage-plugin).
 
