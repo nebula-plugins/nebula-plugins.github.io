@@ -1,4 +1,4 @@
-baseurl: "/nebula"
+baseurl: ""
 exclude: 
   - "less"
   - "node_modules"
