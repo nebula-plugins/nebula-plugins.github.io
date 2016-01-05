@@ -1,8 +1,8 @@
 ## Built for the Enterprise
 
-Nebula is a collection of Gradle plugins, build for Netflix engineers to eliminate boilerplate build logic and provide sane conventions. We chose Gradle for our underlying build system because we felt it was best build tool for Java applications.
+Nebula is a collection of Gradle plugins built for Netflix engineers to eliminate boilerplate build logic and provide sane conventions. We chose Gradle for our underlying build system because we feel Gradle is the best build tool for Java applications.
 
-In order to understand the value that Nebula can provide, let's look at a Gradle build file for a typical Java web project.
+In order to understand the value that Nebula provides, let's look at a Gradle build file for a typical Java web project.
 
 ~~~output
 apply plugin: 'java'
@@ -51,10 +51,10 @@ In addition to previous mentioned features provided by Gradle, the Nebula plugin
 - metadata about the project is now captured and written into the .war's manifest
 - produce `.jar` files for Javadocs as well as Java source files
 - produce and commit to version control a `dependency.lock` file containing the complete transitive dependency graph as resolved by Gradle
-- produce a `.deb` (or `.rpm`) file that is setup to use [daemontools](http://www.daemon-tools.cc/downloads#1Page) to initialize the byproduct of the Gradle application plugin
+- produce a `.deb` (or `.rpm`) file configured to use [daemontools](http://www.daemon-tools.cc/downloads#1Page) for starting and stopping the application.
 - publish the `.war` (or `.jar`) to a maven repository
 - publish a `*-javadoc.jar` and a `*-sources.jar` to a maven repository
-- adds tasks to bump the major, minor or patch version based on [Semantic Versioning](http://semver.org/)
+- add tasks to bump the major, minor or patch version based on [Semantic Versioning](http://semver.org/)
 - the major/minor/patch release can be published to Bintray
 
 You can start by checking out our [Introduction to Nebula]({{ site.baseurl }}/documentation/introduction_to_nebula.html).
