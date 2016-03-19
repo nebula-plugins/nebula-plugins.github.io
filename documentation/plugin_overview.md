@@ -136,7 +136,7 @@ Check out the [gradle-info-plugin GitHub page](https://github.com/nebula-plugins
 ### gradle-scm-plugin
 This plugin is the foundation of the [gradle-git-scm-plugin]() and can be used to build other scm related Gradle plugins.
 
-Check out the [gradle-contacts-plugin GitHub page](https://github.com/nebula-plugins/gradle-scm-plugin) for details on how to use it.
+Check out the [gradle-scm-plugin GitHub page](https://github.com/nebula-plugins/gradle-scm-plugin) for details on how to use it.
 
 ### gradle-warnings-plugin
 A plugin that makes it easier for Gradle plugin developers to send warning messages to the user that will be emitted at the end of the build. 
