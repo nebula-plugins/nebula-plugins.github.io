@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/nebula-plugins/nebula-plugins.github.io",
   "devDependencies": {
-    "bootstrap": "4.1.2",
+    "bootstrap": "4.3.1",
     "browser-sync": "^2.8.0",
     "gulp": "3.9.0",
     "gulp-autoprefixer": "2.3.1",
