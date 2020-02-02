@@ -29,7 +29,7 @@ Nebula was created by [Justin Ryan](https://twitter.com/quidryan) at Netflix. Yo
 
 ## How Netflix builds software
 
-To best understand the origins of Nebula, we should start with Netflix's build needs. Netflix migrated to the AWS a few years ago, and converted our previously monolithic Java application into microservices. Much of Netflix OSS represents the byproduct of our cloud, microservice migration.
+To best understand the origins of Nebula, we should start with Netflix's build needs. Netflix migrated to AWS a few years ago, and converted our previously monolithic Java application into microservices. Much of Netflix OSS represents the byproduct of our cloud, microservice migration.
 
 ### How deployments affects builds
 
@@ -39,14 +39,14 @@ In order to make it easy for engineering teams at Netflix to turn their services
 
 ### How IPC affects builds
 
-Netflix has developed a number of Java libraries designed to handle the complexities of communicating at scale in the cloud. Netflix engineers who wish to write code to call another microservice do so by consuming that service's client jar file. This client jar contains Java API's that abstract the complexities involved with scaling that service.Providing a far client jar makes it easy for consumers of the service to get up and running. The API is defined through a Java interface, making it easy to understand and use.
+Netflix has developed a number of Java libraries designed to handle the complexities of communicating at scale in the cloud. Netflix engineers who wish to write code to call another microservice do so by consuming that service's client jar file. This client jar contains Java API's that abstract the complexities involved with scaling that service. Providing a fat client jar makes it easy for consumers of the service to get up and running. The API is defined through a Java interface, making it easy to understand and use.
 
 There are however a wealth of challenges that this approach creates:
 
 - a client's transitive dependency graph can upgrade dependencies on the consuming service unintentionally
 - if a bad client jar is published, all consumers need to pin back to a known good version
 
-Most of these issues are can be classified as Java dependency management issues. We have written a number of plugins to help improve this story for engineers, including the [gradle-dependencylock-plugin](https://github.com/nebula-plugins/gradle-dependency-lock-plugin), [nebula-dependency-recommender-plugin](https://github.com/nebula-plugins/nebula-dependency-recommender-plugin) and the [gradle-resolution-rules-plugin](https://github.com/nebula-plugins/gradle-resolution-rules-plugin).
+Most of these issues can be classified as Java dependency management issues. We have written a number of plugins to help improve this story for engineers, including the [gradle-dependencylock-plugin](https://github.com/nebula-plugins/gradle-dependency-lock-plugin), [nebula-dependency-recommender-plugin](https://github.com/nebula-plugins/nebula-dependency-recommender-plugin) and the [gradle-resolution-rules-plugin](https://github.com/nebula-plugins/gradle-resolution-rules-plugin).
 
 ## The Nebula Team
 
