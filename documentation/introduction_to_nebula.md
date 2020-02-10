@@ -56,6 +56,9 @@ Nebula is actively developed and maintained by the Netflix Build Tools team, whi
 - [Roberto Perez Alcolea](https://twitter.com/rpalcolea) (Senior Software Engineer)
 - Aubrey Chipman (Senior Software Engineer)
 - Martin Chalupa (Senior Software Engineer)
+- [Danny Thomas](https://twitter.com/dannythomas) (Senior Software Engineer)
+- Karate Vick  (Senior Software Engineer)
+- [Wesley Todd](https://twitter.com/wesleytodd)  (Senior Software Engineer)
 
 ## Previous team members
 
@@ -63,5 +66,4 @@ Nebula is actively developed and maintained by the Netflix Build Tools team, whi
 - [Rob Spieldenner](https://twitter.com/robspieldenner) (Senior Software Engineer)
 - Steve Hill (Senior Software Engineer)
 - [Jon Schneider](https://twitter.com/jon_k_schneider) (Senior Software Engineer)
-- [Danny Thomas](https://twitter.com/dannythomas) (Senior Software Engineer)
 - [Nadav Cohen](https://twitter.com/nadavc) (Senior Software Engineer)
