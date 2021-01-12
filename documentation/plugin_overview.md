@@ -10,14 +10,14 @@ lang: en
 
 # Nebula Plugin Overview
 
-As was stated earlier, Nebula is composed of a number of Gradle plugins, each serving a unique purpose. There are however logical groupings to some of the plugins. The categories 
+As was stated earlier, Nebula is composed of a number of Gradle plugins, each serving a unique purpose. There are however logical groupings to some of the plugins. The categories
 
 - Java dependency management
 - OS packaging
 - Release management
 - Miscellaneous
 - Core plugins
-- Deprecated
+- Deprecated / Maintenance mode
 
 ## Java dependency management
 Gradle provides a substantial [dependency management facility](https://docs.gradle.org/current/userguide/artifact_dependencies_tutorial.html), but we have found these capabilities insufficient for the needs of Netflix engineers. As we result, we have built a few plugins that extend Gradle dependency management capabilities.
@@ -42,28 +42,23 @@ Check out the [gradle-resolution-rules-plugin GitHub page](https://github.com/ne
 
 ## OS Packaging
 
-All deployments at Netflix are conducted via what we call a "bake". A bake is the process of taking a base Amazon Machine Image (BaseAMI) and installing the application via its Debian package. This enables us to easily conform to the [Immutable Server pattern](http://martinfowler.com/bliki/ImmutableServer.html). Nebula provides a few plugins to help with this process. 
+All deployments at Netflix are conducted via what we call a "bake". A bake is the process of taking a base Amazon Machine Image (BaseAMI) and installing the application via its Debian package. This enables us to easily conform to the [Immutable Server pattern](http://martinfowler.com/bliki/ImmutableServer.html). Nebula provides a few plugins to help with this process.
 
 ### gradle-ospackage-plugin
-The goal of this plugin is to produce a system package, typically an RPM or Debian package. 
+The goal of this plugin is to produce a system package, typically an RPM or Debian package.
 
 Check out the [gradle-ospackage-plugin GitHub page](https://github.com/nebula-plugins/gradle-ospackage-plugin) for details on how to use it.
 
-### nebula-ospackage-plugin
-The [nebula-ospackage-plugin page](https://github.com/nebula-plugins/nebula-ospackage-plugin) is an opinionated implementation of the gradle-ospackage-plugin. With the nebula-ospackage-plugin, you can easily package your Gradle application into a RPM or Debian that will set up a daemon process on Tomcat.  
-
-Check out the [nebula-ospackage-plugin GitHub page](https://github.com/nebula-plugins/nebula-ospackage-plugin) for details on how to use it.
-
 ## Release management
 
-There are a number of Nebula plugins that assist in the publishing and releasing of software, based on the needs of Netflix services. 
+There are a number of Nebula plugins that assist in the publishing and releasing of software, based on the needs of Netflix services.
 
 ### nebula-publishing-plugin
 The goal of this plugin is to make it dirt simple to publish your Java library to a Maven or Ivy repository without all of the boilerplate Gradle DSL.
 
 Check out the [nebula-publishing-plugin GitHub page](https://github.com/nebula-plugins/nebula-publishing-plugin) for details on how to use it.
 
-### nebula-release-plugin 
+### nebula-release-plugin
 The goal of this plugin is to simplify a [Semantic Versioning](http://semver.org/) approach to releasing Gradle based builds.    
 
 Check out the [nebula-release-plugin GitHub page](https://github.com/nebula-plugins/nebula-release-plugin) for details on how to use it.
@@ -84,12 +79,31 @@ The goal of this plugin is to remove much of the boilerplate required in using t
 Check out the [nebula-bintray-plugin page](https://github.com/nebula-plugins/nebula-bintray-plugin) for details on how to use it.
 
 ## Miscellaneous
-The Nebula team has built a variety of additional miscellaneous plugins over time, each with a unique purpose. 
+The Nebula team has built a variety of additional miscellaneous plugins over time, each with a unique purpose.
 
-### gradle-metrics-plugin
-The goal of this plugin was to capture and publish metadata and build performance metrics to a centralized location so the Netflix Build Tools team could analyze build trends. The [gradle-metrics-plugin](https://github.com/nebula-plugins/gradle-metrics-plugin) publishes a json document to an [ElasticSearch](https://www.elastic.co/products/elasticsearch) cluster by default.
+### gradle-lint-plugins
 
-Check out the [gradle-metrics-plugin GitHub page](https://github.com/nebula-plugins/gradle-metrics-plugin) for details on how to use it.
+The [Gradle Lint](https://github.com/nebula-plugins/gradle-lint-plugin) plugin is a pluggable and configurable linter tool for identifying and reporting on patterns of misuse or deprecations in Gradle scripts and related files.  It is inspired by the excellent ESLint tool for Javascript and by the formatting in NPM's [eslint-friendly-formatter](https://www.npmjs.com/package/eslint-friendly-formatter) package.
+
+It assists a centralized build tools team in gently introducing and maintaining a standard build script style across their organization.
+
+### gradle-java-cross-compile-plugin
+
+The [gradle-java-cross-compile](https://github.com/nebula-plugins/gradle-java-cross-compile-plugin) plugin automatically configures the bootstrap classpath when the requested `targetCompatibility` is less than the current Java version, avoiding:
+
+```
+warning: [options] bootstrap class path not set in conjunction with -source 1.7
+```
+
+The plugin supports Java, Groovy joint compilation, and Kotlin. The plugin locates JDKs via either:
+
+* Environment variables
+   * In the form JDK1x where x is the major version, for instance JDK18 for Java 8
+* Default installation locations for MacOS, Ubuntu and Windows
+   * Where more than one version of the JDK is available for a given version is available, the highest is used
+   * The lookup prefers Oracle JDKs, but falls back to OpenJDK (Zulu) where possible
+* [SDKMAN!](http://sdkman.io/) JDK candidates
+   * The lookup prefers JDKs with no suffix, then Oracle JDKs then OpenJDK (Zulu)
 
 ### nebula-project-plugin
 The goal of this project is to make it easy to set up a Java project the Netflix way. While it is tailored to Netflix's view of project setup, the defaults are sane enough for most projects. Applying this plugin:
@@ -105,18 +119,13 @@ A feature provided by Maven that is missing from Gradle is the `<developers/>` s
 
 Check out the [gradle-contacts-plugin GitHub page](https://github.com/nebula-plugins/gradle-contacts-plugin) for details on how to use it.
 
-### gradle-aggregate-javadocs-plugin
-If you are building a multi-module project and would like to publish a single Javadoc site for all modules, we recommend using the [gradle-aggregate-javadocs-plugin](https://github.com/nebula-plugins/gradle-aggregate-javadocs-plugin).
-
-Check out the [gradle-aggregate-javadoc-plugin GitHub page](https://github.com/nebula-plugins/gradle-aggregate-javadocs-plugin) for details on how to use it.
-
 ### gradle-extra-configurations-plugin
 The goal of this plugin is to make it easier to add either an `optional` or `provided` configuration to an existing Gradle project.  
 
 Check out the [gradle-extra-configurations-plugin page](https://github.com/nebula-plugins/gradle-extra-configurations-plugin) for details on how to use it.
 
 ### gradle-override-plugin
-This plugin allows you to override arbitrary Gradle properties via command line args. Convenient if you want to quickly change values that are normally static for one off builds. 
+This plugin allows you to override arbitrary Gradle properties via command line args. Convenient if you want to quickly change values that are normally static for one off builds.
 
 Check out the [gradle-override-plugin page](https://github.com/nebula-plugins/gradle-override-plugin) for details on how to use it.
 
@@ -129,7 +138,7 @@ Check out the [nebula-clojure-plugin page](https://github.com/nebula-plugins/neb
 These plugins don't provide any significant value by themselves, but generally are used with some other plugin or infrastructure component.
 
 ### gradle-info-plugin
-The goal of this plugin is to collect metadata about the environment where the Gradle build is being executed. 
+The goal of this plugin is to collect metadata about the environment where the Gradle build is being executed.
 
 Check out the [gradle-info-plugin GitHub page](https://github.com/nebula-plugins/gradle-info-plugin) for details on how to use it.
 
@@ -138,29 +147,31 @@ This plugin is the foundation of the [gradle-git-scm-plugin]() and can be used t
 
 Check out the [gradle-scm-plugin GitHub page](https://github.com/nebula-plugins/gradle-scm-plugin) for details on how to use it.
 
-### gradle-warnings-plugin
-A plugin that makes it easier for Gradle plugin developers to send warning messages to the user that will be emitted at the end of the build. 
-
-Check out the [gradle-warnings-plugin GitHub page](https://github.com/nebula-plugins/gradle-warnings-plugin) for details on how to use it.
-
 ### nebula-core
 Common classes shared by Nebula plugins. Adds useful Gradle tasks such as Download, Unzip and Untar.
 
 Check out the [nebula-core-plugin GitHub page](https://github.com/nebula-plugins/nebula-core-plugin) for details on how to use it.
 
-## Deprecated
+## Deprecated / Maintenance mode
+
+### gradle-metrics-plugin
+The goal of this plugin was to capture and publish metadata and build performance metrics to a centralized location so the Netflix Build Tools team could analyze build trends. The [gradle-metrics-plugin](https://github.com/nebula-plugins/gradle-metrics-plugin) publishes a json document to an [ElasticSearch](https://www.elastic.co/products/elasticsearch) cluster by default.
+
+Check out the [gradle-metrics-plugin GitHub page](https://github.com/nebula-plugins/gradle-metrics-plugin) for details on how to use it.
 
 ### nebula-test
 
 The [nebula-test](https://github.com/nebula-plugins/nebula-test) plugin was extremely useful in ensuring we can easily test our plugins. However, Gradle has begun to integrate these concepts into Gradle core. As a result, we recommend using [Gradle TestKit](https://docs.gradle.org/current/userguide/test_kit.html) instead of nebula-test.
 
-### gradle-webpack-plugin
+### nebula-kotlin-plugin
 
-The [gradle-webpack-plugin](https://github.com/nebula-plugins/gradle-webpack-plugin) was a short lived experiment in executing [webpack](https://webpack.github.io/) from Gradle. We never invested in this project and as a result do not consider this plugin production ready or supported.
+The [nebula-kotlin](https://github.com/nebula-plugins/nebula-kotlin-plugin) plugin was extremely useful in providing the Kotlin plugin via the Gradle plugin portal, and added ergonomic improvements over the default plugin:
 
-### gradle-blacklist-plugin
+* Allows Kotlin library versions to be omitted, inferring them automatically from the plugin version
+* For Kotlin 1.1 and later, sets the -jvm-target and uses the jre standard library based on the sourceCompatibility
+* Use the https://github.com/nebula-plugins/gradle-java-cross-compile-plugin to set the targetJdk if desired
+* Bundles the kotlin-allopen and kotlin-noarg plugins to allow them to be applied without adding them manually to the classpath
 
-The [gradle-blacklist-plugin](https://github.com/nebula-plugins/gradle-blacklist-plugin) was the predecessor to the [gradle-resolution-rules-plugin](https://github.com/nebula-plugins/gradle-resolution-rules-plugin). Since the gradle-blacklist-plugin was only able to impact a single project at a time, it's value was limited. We recommend using the [gradle-resolution-rules-plugin](https://github.com/nebula-plugins/gradle-resolution-rules-plugin) instead. 
+However, this plugin is in maintenance mode but will continue to receive 1.2 and 1.3 Kotlin releases. JetBrains has deprecated the existing `jvm` plugin and replaced it with the `multiplatform` plugin.
 
-### nebula-blob-plugin
-The [nebula-blob-plugin](https://github.com/nebula-plugins/nebula-blob-plugin) was a small experimental plugin of limited value we no longer plan to support. 
+The multiplatform plugin is a complete migration from the legacy plugin and provides many of the ergonomic features, such as JVM target configuration and Kotlin library version management that this plugin provided. If you have a project that will move to 1.4 once it's released you should migrate to `multiplatform`.
