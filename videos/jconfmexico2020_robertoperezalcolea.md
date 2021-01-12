@@ -14,5 +14,3 @@ At Netflix, engineers are not immune to the cost of dependency updates. Library 
 After years of evolving our build, we've developed a few conceptual models of dependency management. Dependency management is hard, and in all cases there are compromises, and you the build owner should be conscious of which choices you're making and what else is available.
 
 On this session, we'll introduce some tools we've developed at Netflix which attack dependency issues on a large scale to make it easier for every JVM engineer at Netflix and how we react to the scenarios mentioned above.
-
-While most of our tooling is build around Gradle, the learnings from this talk can be applied to other build tools such as Maven.
