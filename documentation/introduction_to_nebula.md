@@ -50,20 +50,19 @@ Most of these issues can be classified as Java dependency management issues. We 
 
 ## The Nebula Team
 
-Nebula is actively developed and maintained by the Netflix Build Tools team, which is a part of Engineering Tools & Services. Feel free to reach out if you have any questions.
+Nebula is actively developed and maintained by the Java Build Team, which is a part of Productivity Engineering. Feel free to reach out if you have any questions.
 
-- Erin Kidwell (Director, Engineering Tools & Services)
+- Phillipa Avery (Engineering Manager)
 - [Roberto Perez Alcolea](https://twitter.com/rpalcolea) (Senior Software Engineer)
 - Aubrey Chipman (Senior Software Engineer)
 - Martin Chalupa (Senior Software Engineer)
 - [Danny Thomas](https://twitter.com/dannythomas) (Senior Software Engineer)
-- Karate Vick  (Senior Software Engineer)
-- [Wesley Todd](https://twitter.com/wesleytodd)  (Senior Software Engineer)
 
 ## Previous team members
 
+- [Erin Kidwell](https://twitter.com/erinmkidwell) (Director, Engineering Tools & Services)
 - [Mike McGarr](https://twitter.com/SonOfGarr) (Engineering Manager)
 - [Rob Spieldenner](https://twitter.com/robspieldenner) (Senior Software Engineer)
-- Steve Hill (Senior Software Engineer)
+- [Steve Hill](https://twitter.com/sghill) (Senior Software Engineer)
 - [Jon Schneider](https://twitter.com/jon_k_schneider) (Senior Software Engineer)
 - [Nadav Cohen](https://twitter.com/nadavc) (Senior Software Engineer)
