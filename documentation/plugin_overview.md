@@ -63,6 +63,11 @@ The goal of this plugin is to simplify a [Semantic Versioning](http://semver.org
 
 Check out the [nebula-release-plugin GitHub page](https://github.com/nebula-plugins/nebula-release-plugin) for details on how to use it.
 
+### nebula-bintray-plugin
+The goal of this plugin is to remove much of the boilerplate required in using the existing [gradle-bintray-plugin](https://github.com/bintray/gradle-bintray-plugin). The goal is allow users to apply the plugin and publish to [Bintray](https://bintray.com/) with very little ceremony.
+
+Check out the [nebula-bintray-plugin page](https://github.com/nebula-plugins/nebula-bintray-plugin) for details on how to use it.
+
 ### gradle-git-scm-plugin
 The goal of this plugin is to allow for the execution of [Git](https://git-scm.com/) commands from a Gradle build.
 
@@ -73,15 +78,10 @@ The goal of this plugin is to provide tasks that allow the management of a Git r
 
 Check out the [gradle-stash-plugin GitHub page](https://github.com/nebula-plugins/gradle-stash-plugin) for details on how to use it.
 
-### nebula-bintray-plugin
-The goal of this plugin is to remove much of the boilerplate required in using the existing [gradle-bintray-plugin](https://github.com/bintray/gradle-bintray-plugin). The goal is allow users to apply the plugin and publish to [Bintray](https://bintray.com/) with very little ceremony.
-
-Check out the [nebula-bintray-plugin page](https://github.com/nebula-plugins/nebula-bintray-plugin) for details on how to use it.
-
 ## Miscellaneous
 The Nebula team has built a variety of additional miscellaneous plugins over time, each with a unique purpose.
 
-### gradle-lint-plugins
+### gradle-lint-plugin
 
 The [Gradle Lint](https://github.com/nebula-plugins/gradle-lint-plugin) plugin is a pluggable and configurable linter tool for identifying and reporting on patterns of misuse or deprecations in Gradle scripts and related files.  It is inspired by the excellent ESLint tool for Javascript and by the formatting in NPM's [eslint-friendly-formatter](https://www.npmjs.com/package/eslint-friendly-formatter) package.
 
@@ -134,6 +134,18 @@ An opinionated plugin that wraps the [clojuresque](https://bitbucket.org/clojure
 
 Check out the [nebula-clojure-plugin page](https://github.com/nebula-plugins/nebula-clojure-plugin) for details on how to use it.
 
+### gradle-netflixoss-project-plugin
+
+Gradle plugin to setup common needs for Netflix OSS projects
+
+This plugin is to support projects in the NetflixOSS org (and it isn't meant to be used elsewhere). It is at its essence just a combination of other plugins that are common to all NetflixOSS projects, with some additional configuration. The primary responsibilities is to:
+
+* Provide release process
+* Configure publishing
+* Recommend license headers
+
+This project could be used as an example of how a "project plugin" could work. A "project plugin" is a Gradle plugin that provides consistency across many projects, e.g. in a Github org or an enterprise.
+
 ## Core Plugins
 These plugins don't provide any significant value by themselves, but generally are used with some other plugin or infrastructure component.
 
@@ -152,6 +164,12 @@ Common classes shared by Nebula plugins. Adds useful Gradle tasks such as Downlo
 
 Check out the [nebula-core-plugin GitHub page](https://github.com/nebula-plugins/nebula-core-plugin) for details on how to use it.
 
+### nebula-gradle-interop
+
+Kotlin library providing extensions to assist with Gradle iterop and backwards compatibility.
+
+Check out the [nebula-gradle-interop GitHub page](https://github.com/nebula-plugins/nebula-gradle-interop).
+
 ## Deprecated / Maintenance mode
 
 ### gradle-metrics-plugin
@@ -169,8 +187,8 @@ The [nebula-kotlin](https://github.com/nebula-plugins/nebula-kotlin-plugin) plug
 
 * Allows Kotlin library versions to be omitted, inferring them automatically from the plugin version
 * For Kotlin 1.1 and later, sets the -jvm-target and uses the jre standard library based on the sourceCompatibility
-* Use the https://github.com/nebula-plugins/gradle-java-cross-compile-plugin to set the targetJdk if desired
-* Bundles the kotlin-allopen and kotlin-noarg plugins to allow them to be applied without adding them manually to the classpath
+* Use the [gradle-java-cross-compile-plugin](https://github.com/nebula-plugins/gradle-java-cross-compile-plugin) to set the `targetJdk` if desired
+* Bundles the `kotlin-allopen` and `kotlin-noarg` plugins to allow them to be applied without adding them manually to the classpath
 
 However, this plugin is in maintenance mode but will continue to receive 1.2 and 1.3 Kotlin releases. JetBrains has deprecated the existing `jvm` plugin and replaced it with the `multiplatform` plugin.
 
