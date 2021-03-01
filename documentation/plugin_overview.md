@@ -191,5 +191,3 @@ The multiplatform plugin is a complete migration from the legacy plugin and prov
 
 ### nebula-core
 Common classes shared by Nebula plugins. Adds useful Gradle tasks such as Download, Unzip and Untar.
-
-Check out the [nebula-core-plugin GitHub page](https://github.com/nebula-plugins/nebula-core-plugin) for details on how to use it.
