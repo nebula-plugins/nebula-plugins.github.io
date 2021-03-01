@@ -159,11 +159,6 @@ This plugin is the foundation of the [gradle-git-scm-plugin]() and can be used t
 
 Check out the [gradle-scm-plugin GitHub page](https://github.com/nebula-plugins/gradle-scm-plugin) for details on how to use it.
 
-### nebula-core
-Common classes shared by Nebula plugins. Adds useful Gradle tasks such as Download, Unzip and Untar.
-
-Check out the [nebula-core-plugin GitHub page](https://github.com/nebula-plugins/nebula-core-plugin) for details on how to use it.
-
 ### nebula-gradle-interop
 
 Kotlin library providing extensions to assist with Gradle iterop and backwards compatibility.
@@ -193,3 +188,8 @@ The [nebula-kotlin](https://github.com/nebula-plugins/nebula-kotlin-plugin) plug
 However, this plugin is in maintenance mode but will continue to receive 1.2 and 1.3 Kotlin releases. JetBrains has deprecated the existing `jvm` plugin and replaced it with the `multiplatform` plugin.
 
 The multiplatform plugin is a complete migration from the legacy plugin and provides many of the ergonomic features, such as JVM target configuration and Kotlin library version management that this plugin provided. If you have a project that will move to 1.4 once it's released you should migrate to `multiplatform`.
+
+### nebula-core
+Common classes shared by Nebula plugins. Adds useful Gradle tasks such as Download, Unzip and Untar.
+
+Check out the [nebula-core-plugin GitHub page](https://github.com/nebula-plugins/nebula-core-plugin) for details on how to use it.
