@@ -1,11 +1,11 @@
 ---
 layout: video-page
-title: Dependency Management at Scale (Spanish)
-id: jconfmexico2020_robertoperezalcolea   
-youtube_id: "DykdvD6MTZY"
+title: Dependency Management at Scale
+id: charlotte_jug_2021_robertoperezalcolea   
+youtube_id: "kCKjrWDMSg"
 ---                     
 
-## Dependency Management at Scale [Spanish] (Roberto Perez Alcolea)
+## Dependency Management at Scale (Roberto Perez Alcolea)
 
 In an environment where software is constantly changing and new versions of a library should be distributed across thousands of projects, how can you know that your projects are using the right version of a given dependency? What if a OSS library introduces a security vulnerability and you need to make sure that no one is using it in your company? What if an internal library introduces a bad change and you need everyone to upgrade/downgrade? Automating these for hundreds or thousands of engineers is crucial.
 
