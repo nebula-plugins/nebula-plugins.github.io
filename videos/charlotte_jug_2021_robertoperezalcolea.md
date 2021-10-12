@@ -2,7 +2,7 @@
 layout: video-page
 title: Dependency Management at Scale
 id: charlotte_jug_2021_robertoperezalcolea   
-youtube_id: "kCKjrWDMSg"
+youtube_id: "jkCKjrWDMSg"
 ---                     
 
 ## Dependency Management at Scale (Roberto Perez Alcolea)
