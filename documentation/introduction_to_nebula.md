@@ -52,7 +52,7 @@ Most of these issues can be classified as Java dependency management issues. We 
 
 Nebula is actively developed and maintained by the Java Build Team, which is a part of Productivity Engineering. Feel free to reach out if you have any questions.
 
-- Phillipa Avery (Engineering Manager)
+- [Ian Brown](https://twitter.com/igb) (Engineering Manager)
 - [Roberto Perez Alcolea](https://twitter.com/rpalcolea) (Senior Software Engineer)
 - [Aubrey Chipman](https://twitter.com/AubreyChipman) (Senior Software Engineer)
 - [Martin Chalupa](https://twitter.com/chalimartines) (Senior Software Engineer)
