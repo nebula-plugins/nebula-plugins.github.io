@@ -191,3 +191,87 @@ The multiplatform plugin is a complete migration from the legacy plugin and prov
 
 ### nebula-core
 Common classes shared by Nebula plugins. Adds useful Gradle tasks such as Download, Unzip and Untar.
+
+## Project Status
+
+This section breaks the Nebula projects down by status. 
+
+### Active Projects
+
+Active projects are stable, or receive frequent updates. Issues opened in an active project should be addressed in a reasonable time frame. We will keep these projects up-to-date with the latest Gradle releases and features.
+
+| Project Name                                                                                               | Status    |
+|------------------------------------------------------------------------------------------------------------|-----------|
+| [gradle-contacts-plugin](https://github.com/nebula-plugins/gradle-contacts-plugin)                         | Active    |
+| [gradle-extra-configurations-plugin](https://github.com/nebula-plugins/gradle-extra-configurations-plugin) | Active    |
+| [gradle-info-plugin](https://github.com/nebula-plugins/gradle-info-plugin)                                 | Active    |
+| [gradle-jakartaee-migration-plugin](https://github.com/nebula-plugins/gradle-jakartaee-migration-plugin)   | Active    |
+| [gradle-lint-plugin](https://github.com/nebula-plugins/gradle-lint-plugin)                                 | Active    |
+| [gradle-ospackage-plugin](https://github.com/nebula-plugins/gradle-ospackage-plugin)                       | Active    |
+| [gradle-resolution-rules](https://github.com/nebula-plugins/gradle-resolution-rules)                       | Active    |
+| [gradle-resolution-rules-plugin](https://github.com/nebula-plugins/gradle-resolution-rules-plugin)         | Active    |
+| [nebula-dependency-base-plugin](https://github.com/nebula-plugins/nebula-dependency-base-plugin)           | Active    |
+| [nebula-gradle-interop](https://github.com/nebula-plugins/nebula-gradle-interop)                           | Active    |
+| [nebula-hollow-plugin](https://github.com/nebula-plugins/nebula-hollow-plugin)                             | Active    |
+| [nebula-project-plugin](https://github.com/nebula-plugins/nebula-project-plugin)                           | Active    |
+| [nebula-publishing-plugin](https://github.com/nebula-plugins/nebula-publishing-plugin)                     | Active    |
+| [nebula-release-plugin](https://github.com/nebula-plugins/nebula-release-plugin)                           | Active    |
+| [nebula-test](https://github.com/nebula-plugins/nebula-test)                                               | Active    |
+
+#### Maintenance
+
+Maintenance projects are stable, and may be used internally by Netflix, but are not receiving any new features. The projects have a more modern OSS alternative, or are made obsolete by built-in Gradle functionality. Bugfixes will be addressed if the bug is observed within Netflix, but may not be addressed otherwise.
+
+| Project Name                                                                                                   | Status      |
+|----------------------------------------------------------------------------------------------------------------|-------------|
+| [gradle-dependency-lock-plugin](https://github.com/nebula-plugins/gradle-dependency-lock-plugin)               | Maintenance |
+| [nebula-clojure-plugin](https://github.com/nebula-plugins/nebula-clojure-plugin)                               | Maintenance |
+| [nebula-dependencies-comparison](https://github.com/nebula-plugins/nebula-dependencies-comparison)             | Maintenance |
+| [nebula-dependency-recommender-plugin](https://github.com/nebula-plugins/nebula-dependency-recommender-plugin) | Maintenance |
+| [nebula-node-plugin](https://github.com/nebula-plugins/nebula-node-plugin)                                     | Maintenance |
+
+### Internal / Utility / Sample Projects
+
+These projects are used by other Nebula projects, or exist only as an example of how to use Nebula plugins. These should not be used directly.
+
+| Project Name                                                                                   |
+| ---------------------------------------------------------------------------------------------- |
+| example-multiproject                                                                           |
+| gradle-nebula-integration                                                                      |
+| gradle-netflixoss-project-plugin                                                               |
+| gradle-nothing-plugin                                                                          |
+| investigate-insight                                                                            |
+| [nebula-jfrog-test](https://github.com/nebula-plugins/nebula-jfrog-test)                       |
+| [nebula-oss-publishing-plugin](https://github.com/nebula-plugins/nebula-oss-publishing-plugin) |
+| [nebula-plugin-plugin](https://github.com/nebula-plugins/nebula-plugin-plugin)                 |
+| [nebula-plugins.github.io](https://github.com/nebula-plugins/nebula-plugins.github.io)         |
+| [nebula-sample-plugin](https://github.com/nebula-plugins/nebula-sample-plugin)                 |
+
+### Archived Projects
+These projects are read-only in GitHub and will no longer receive any update.
+
+| Project Name                                                                                           | EOL Date     |
+| ------------------------------------------------------------------------------------------------------ | ------------ |
+| buildscan-test                                                                                         | Aug 28, 2018 |
+| ensure                                                                                                 | Aug 21, 2018 |
+| example-project                                                                                        | Nov 9, 2021  |
+| gradle-aggregate-javadocs-plugin                                                                       | Mar 1, 2021  |
+| gradle-blacklist-plugin                                                                                | Aug 21, 2018 |
+| gradle-git-scm-plugin                                                                                  | Oct 20, 2023 |
+| [gradle-java-cross-compile-plugin](https://github.com/nebula-plugins/gradle-java-cross-compile-plugin) | Sep 11, 2023 |
+| gradle-metrics-plugin                                                                                  | Jan 15, 2021 |
+| gradle-override-plugin                                                                                 | Nov 27, 2023 |
+| gradle-rxjava-project-plugin                                                                           | Sep 1, 2018  |
+| gradle-scm-plugin                                                                                      | Oct 20, 2023 |
+| gradle-stash-plugin                                                                                    | Sep 26, 2023 |
+| gradle-warnings-plugin                                                                                 | Aug 21, 2018 |
+| lazybones-nebula-plugin-template                                                                       | Aug 14, 2018 |
+| lock-experimental                                                                                      | Aug 21, 2018 |
+| nebula-bintray-plugin                                                                                  | Feb 7, 2021  |
+| nebula-blob-plugin                                                                                     | Aug 21, 2018 |
+| [nebula-core](https://github.com/nebula-plugins/nebula-core)                                           | Mar 1, 2021  |
+| nebula-docker-plugin                                                                                   | Mar 1, 2021  |
+| nebula-grails-plugin                                                                                   | Jul 29, 2022 |
+| [nebula-interactive](https://github.com/nebula-plugins/nebula-interactive)                             | Aug 28, 2018 |
+| [nebula-kotlin-plugin](https://github.com/nebula-plugins/nebula-kotlin-plugin)                         | Nov 9, 2021  |
+| [nebula-ospackage-plugin](https://github.com/nebula-plugins/nebula-ospackage-plugin)                   | Aug 21, 2018 |
