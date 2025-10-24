@@ -1,6 +1,6 @@
 ---
 layout: video-page
-title: From Lag to Lightning: Transforming Dependency Update Timelines
+title: From Lag to Lightning Transforming Dependency Update Timelines
 id: gradle_summit_2025_aubrey_roberto
 youtube_id: "T_9GLnuoDHo"
 ---                     
