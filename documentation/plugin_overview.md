@@ -200,23 +200,25 @@ This section breaks the Nebula projects down by status.
 
 Active projects are stable, or receive frequent updates. Issues opened in an active project should be addressed in a reasonable time frame. We will keep these projects up-to-date with the latest Gradle releases and features.
 
-| Project Name                                                                                               | Status    |
-|------------------------------------------------------------------------------------------------------------|-----------|
-| [gradle-contacts-plugin](https://github.com/nebula-plugins/gradle-contacts-plugin)                         | Active    |
-| [gradle-extra-configurations-plugin](https://github.com/nebula-plugins/gradle-extra-configurations-plugin) | Active    |
-| [gradle-info-plugin](https://github.com/nebula-plugins/gradle-info-plugin)                                 | Active    |
-| [gradle-jakartaee-migration-plugin](https://github.com/nebula-plugins/gradle-jakartaee-migration-plugin)   | Active    |
-| [gradle-lint-plugin](https://github.com/nebula-plugins/gradle-lint-plugin)                                 | Active    |
-| [gradle-ospackage-plugin](https://github.com/nebula-plugins/gradle-ospackage-plugin)                       | Active    |
-| [gradle-resolution-rules](https://github.com/nebula-plugins/gradle-resolution-rules)                       | Active    |
-| [gradle-resolution-rules-plugin](https://github.com/nebula-plugins/gradle-resolution-rules-plugin)         | Active    |
-| [nebula-dependency-base-plugin](https://github.com/nebula-plugins/nebula-dependency-base-plugin)           | Active    |
-| [nebula-gradle-interop](https://github.com/nebula-plugins/nebula-gradle-interop)                           | Active    |
-| [nebula-hollow-plugin](https://github.com/nebula-plugins/nebula-hollow-plugin)                             | Active    |
-| [nebula-project-plugin](https://github.com/nebula-plugins/nebula-project-plugin)                           | Active    |
-| [nebula-publishing-plugin](https://github.com/nebula-plugins/nebula-publishing-plugin)                     | Active    |
-| [nebula-release-plugin](https://github.com/nebula-plugins/nebula-release-plugin)                           | Active    |
-| [nebula-test](https://github.com/nebula-plugins/nebula-test)                                               | Active    |
+| Project Name                                                                                               | Status |
+|------------------------------------------------------------------------------------------------------------|--------|
+| [gradle-contacts-plugin](https://github.com/nebula-plugins/gradle-contacts-plugin)                         | Active |
+| [gradle-extra-configurations-plugin](https://github.com/nebula-plugins/gradle-extra-configurations-plugin) | Active |
+| [gradle-info-plugin](https://github.com/nebula-plugins/gradle-info-plugin)                                 | Active |
+| [gradle-jakartaee-migration-plugin](https://github.com/nebula-plugins/gradle-jakartaee-migration-plugin)   | Active |
+| [gradle-lint-plugin](https://github.com/nebula-plugins/gradle-lint-plugin)                                 | Active |
+| [gradle-ospackage-plugin](https://github.com/nebula-plugins/gradle-ospackage-plugin)                       | Active |
+| [gradle-resolution-rules](https://github.com/nebula-plugins/gradle-resolution-rules)                       | Active |
+| [gradle-resolution-rules-plugin](https://github.com/nebula-plugins/gradle-resolution-rules-plugin)         | Active |
+| [nebula-dependency-base-plugin](https://github.com/nebula-plugins/nebula-dependency-base-plugin)           | Active |
+| [nebula-gradle-interop](https://github.com/nebula-plugins/nebula-gradle-interop)                           | Active |
+| [nebula-hollow-plugin](https://github.com/nebula-plugins/nebula-hollow-plugin)                             | Active |
+| [nebula-project-plugin](https://github.com/nebula-plugins/nebula-project-plugin)                           | Active |
+| [nebula-publishing-plugin](https://github.com/nebula-plugins/nebula-publishing-plugin)                     | Active |
+| [nebula-release-plugin](https://github.com/nebula-plugins/nebula-release-plugin)                           | Active |
+| [nebula-test](https://github.com/nebula-plugins/nebula-test)                                               | Active |
+| [nebula-archrules-plugin](https://github.com/nebula-plugins/nebula-archrules-plugin)                       | Active |
+| [nebula-archrules](https://github.com/nebula-plugins/nebula-archrules)                                     | Active |
 
 #### Maintenance
 
