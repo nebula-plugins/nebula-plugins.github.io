@@ -63,21 +63,6 @@ The goal of this plugin is to simplify a [Semantic Versioning](http://semver.org
 
 Check out the [nebula-release-plugin GitHub page](https://github.com/nebula-plugins/nebula-release-plugin) for details on how to use it.
 
-### nebula-bintray-plugin
-The goal of this plugin is to remove much of the boilerplate required in using the existing [gradle-bintray-plugin](https://github.com/bintray/gradle-bintray-plugin). The goal is allow users to apply the plugin and publish to [Bintray](https://bintray.com/) with very little ceremony.
-
-Check out the [nebula-bintray-plugin page](https://github.com/nebula-plugins/nebula-bintray-plugin) for details on how to use it.
-
-### gradle-git-scm-plugin
-The goal of this plugin is to allow for the execution of [Git](https://git-scm.com/) commands from a Gradle build.
-
-Check out the [gradle-git-scm-plugin page](https://github.com/nebula-plugins/gradle-git-scm-plugin) for details on how to use it.
-
-### gradle-stash-plugin
-The goal of this plugin is to provide tasks that allow the management of a Git repository in a [Bitbucket server (formerly Stash)](https://www.atlassian.com/software/bitbucket/server).
-
-Check out the [gradle-stash-plugin GitHub page](https://github.com/nebula-plugins/gradle-stash-plugin) for details on how to use it.
-
 ## Miscellaneous
 The Nebula team has built a variety of additional miscellaneous plugins over time, each with a unique purpose.
 
@@ -86,24 +71,6 @@ The Nebula team has built a variety of additional miscellaneous plugins over tim
 The [Gradle Lint](https://github.com/nebula-plugins/gradle-lint-plugin) plugin is a pluggable and configurable linter tool for identifying and reporting on patterns of misuse or deprecations in Gradle scripts and related files.  It is inspired by the excellent ESLint tool for Javascript and by the formatting in NPM's [eslint-friendly-formatter](https://www.npmjs.com/package/eslint-friendly-formatter) package.
 
 It assists a centralized build tools team in gently introducing and maintaining a standard build script style across their organization.
-
-### gradle-java-cross-compile-plugin
-
-The [gradle-java-cross-compile](https://github.com/nebula-plugins/gradle-java-cross-compile-plugin) plugin automatically configures the bootstrap classpath when the requested `targetCompatibility` is less than the current Java version, avoiding:
-
-```
-warning: [options] bootstrap class path not set in conjunction with -source 1.7
-```
-
-The plugin supports Java, Groovy joint compilation, and Kotlin. The plugin locates JDKs via either:
-
-* Environment variables
-   * In the form JDK1x where x is the major version, for instance JDK18 for Java 8
-* Default installation locations for MacOS, Ubuntu and Windows
-   * Where more than one version of the JDK is available for a given version is available, the highest is used
-   * The lookup prefers Oracle JDKs, but falls back to OpenJDK (Zulu) where possible
-* [SDKMAN!](http://sdkman.io/) JDK candidates
-   * The lookup prefers JDKs with no suffix, then Oracle JDKs then OpenJDK (Zulu)
 
 ### nebula-project-plugin
 The goal of this project is to make it easy to set up a Java project the Netflix way. While it is tailored to Netflix's view of project setup, the defaults are sane enough for most projects. Applying this plugin:
@@ -118,16 +85,6 @@ Check out the [nebula-project-plugin page](https://github.com/nebula-plugins/neb
 A feature provided by Maven that is missing from Gradle is the `<developers/>` section, which denotes the contact information for the owners of the project. The purpose of the  [gradle-contacts-plugin](https://github.com/nebula-plugins/gradle-contacts-plugin) is to provide comparable features to Gradle.  
 
 Check out the [gradle-contacts-plugin GitHub page](https://github.com/nebula-plugins/gradle-contacts-plugin) for details on how to use it.
-
-### gradle-extra-configurations-plugin
-The goal of this plugin is to make it easier to add either an `optional` or `provided` configuration to an existing Gradle project.  
-
-Check out the [gradle-extra-configurations-plugin page](https://github.com/nebula-plugins/gradle-extra-configurations-plugin) for details on how to use it.
-
-### gradle-override-plugin
-This plugin allows you to override arbitrary Gradle properties via command line args. Convenient if you want to quickly change values that are normally static for one off builds.
-
-Check out the [gradle-override-plugin page](https://github.com/nebula-plugins/gradle-override-plugin) for details on how to use it.
 
 ### nebula-clojure-plugin
 An opinionated plugin that wraps the [clojuresque](https://bitbucket.org/clojuresque/clojuresque) gradle plugin, removing the [Clojars](https://clojars.org/) logic.
@@ -154,43 +111,15 @@ The goal of this plugin is to collect metadata about the environment where the G
 
 Check out the [gradle-info-plugin GitHub page](https://github.com/nebula-plugins/gradle-info-plugin) for details on how to use it.
 
-### gradle-scm-plugin
-This plugin is the foundation of the [gradle-git-scm-plugin]() and can be used to build other scm related Gradle plugins.
-
-Check out the [gradle-scm-plugin GitHub page](https://github.com/nebula-plugins/gradle-scm-plugin) for details on how to use it.
-
 ### nebula-gradle-interop
 
 Kotlin library providing extensions to assist with Gradle iterop and backwards compatibility.
 
 Check out the [nebula-gradle-interop GitHub page](https://github.com/nebula-plugins/nebula-gradle-interop).
 
-## Deprecated / Maintenance mode
-
-### gradle-metrics-plugin
-The goal of this plugin was to capture and publish metadata and build performance metrics to a centralized location so the Netflix Build Tools team could analyze build trends. The [gradle-metrics-plugin](https://github.com/nebula-plugins/gradle-metrics-plugin) publishes a json document to an [ElasticSearch](https://www.elastic.co/products/elasticsearch) cluster by default.
-
-Check out the [gradle-metrics-plugin GitHub page](https://github.com/nebula-plugins/gradle-metrics-plugin) for details on how to use it.
-
 ### nebula-test
 
 The [nebula-test](https://github.com/nebula-plugins/nebula-test) plugin was extremely useful in ensuring we can easily test our plugins. However, Gradle has begun to integrate these concepts into Gradle core. As a result, we recommend using [Gradle TestKit](https://docs.gradle.org/current/userguide/test_kit.html) instead of nebula-test.
-
-### nebula-kotlin-plugin
-
-The [nebula-kotlin](https://github.com/nebula-plugins/nebula-kotlin-plugin) plugin was extremely useful in providing the Kotlin plugin via the Gradle plugin portal, and added ergonomic improvements over the default plugin:
-
-* Allows Kotlin library versions to be omitted, inferring them automatically from the plugin version
-* For Kotlin 1.1 and later, sets the -jvm-target and uses the jre standard library based on the sourceCompatibility
-* Use the [gradle-java-cross-compile-plugin](https://github.com/nebula-plugins/gradle-java-cross-compile-plugin) to set the `targetJdk` if desired
-* Bundles the `kotlin-allopen` and `kotlin-noarg` plugins to allow them to be applied without adding them manually to the classpath
-
-However, this plugin is in maintenance mode but will continue to receive 1.2 and 1.3 Kotlin releases. JetBrains has deprecated the existing `jvm` plugin and replaced it with the `multiplatform` plugin.
-
-The multiplatform plugin is a complete migration from the legacy plugin and provides many of the ergonomic features, such as JVM target configuration and Kotlin library version management that this plugin provided. If you have a project that will move to 1.4 once it's released you should migrate to `multiplatform`.
-
-### nebula-core
-Common classes shared by Nebula plugins. Adds useful Gradle tasks such as Download, Unzip and Untar.
 
 ## Project Status
 
@@ -203,7 +132,6 @@ Active projects are stable, or receive frequent updates. Issues opened in an act
 | Project Name                                                                                               | Status |
 |------------------------------------------------------------------------------------------------------------|--------|
 | [gradle-contacts-plugin](https://github.com/nebula-plugins/gradle-contacts-plugin)                         | Active |
-| [gradle-extra-configurations-plugin](https://github.com/nebula-plugins/gradle-extra-configurations-plugin) | Active |
 | [gradle-info-plugin](https://github.com/nebula-plugins/gradle-info-plugin)                                 | Active |
 | [gradle-jakartaee-migration-plugin](https://github.com/nebula-plugins/gradle-jakartaee-migration-plugin)   | Active |
 | [gradle-lint-plugin](https://github.com/nebula-plugins/gradle-lint-plugin)                                 | Active |
@@ -252,28 +180,29 @@ These projects are used by other Nebula projects, or exist only as an example of
 ### Archived Projects
 These projects are read-only in GitHub and will no longer receive any update.
 
-| Project Name                                                                                           | EOL Date     |
-| ------------------------------------------------------------------------------------------------------ | ------------ |
-| buildscan-test                                                                                         | Aug 28, 2018 |
-| ensure                                                                                                 | Aug 21, 2018 |
-| example-project                                                                                        | Nov 9, 2021  |
-| gradle-aggregate-javadocs-plugin                                                                       | Mar 1, 2021  |
-| gradle-blacklist-plugin                                                                                | Aug 21, 2018 |
-| gradle-git-scm-plugin                                                                                  | Oct 20, 2023 |
-| [gradle-java-cross-compile-plugin](https://github.com/nebula-plugins/gradle-java-cross-compile-plugin) | Sep 11, 2023 |
-| gradle-metrics-plugin                                                                                  | Jan 15, 2021 |
-| gradle-override-plugin                                                                                 | Nov 27, 2023 |
-| gradle-rxjava-project-plugin                                                                           | Sep 1, 2018  |
-| gradle-scm-plugin                                                                                      | Oct 20, 2023 |
-| gradle-stash-plugin                                                                                    | Sep 26, 2023 |
-| gradle-warnings-plugin                                                                                 | Aug 21, 2018 |
-| lazybones-nebula-plugin-template                                                                       | Aug 14, 2018 |
-| lock-experimental                                                                                      | Aug 21, 2018 |
-| nebula-bintray-plugin                                                                                  | Feb 7, 2021  |
-| nebula-blob-plugin                                                                                     | Aug 21, 2018 |
-| [nebula-core](https://github.com/nebula-plugins/nebula-core)                                           | Mar 1, 2021  |
-| nebula-docker-plugin                                                                                   | Mar 1, 2021  |
-| nebula-grails-plugin                                                                                   | Jul 29, 2022 |
-| [nebula-interactive](https://github.com/nebula-plugins/nebula-interactive)                             | Aug 28, 2018 |
-| [nebula-kotlin-plugin](https://github.com/nebula-plugins/nebula-kotlin-plugin)                         | Nov 9, 2021  |
-| [nebula-ospackage-plugin](https://github.com/nebula-plugins/nebula-ospackage-plugin)                   | Aug 21, 2018 |
+| Project Name                                                                                               | EOL Date     |
+|------------------------------------------------------------------------------------------------------------|--------------|
+| buildscan-test                                                                                             | Aug 28, 2018 |
+| ensure                                                                                                     | Aug 21, 2018 |
+| example-project                                                                                            | Nov 9, 2021  |
+| gradle-aggregate-javadocs-plugin                                                                           | Mar 1, 2021  |
+| gradle-blacklist-plugin                                                                                    | Aug 21, 2018 |
+| gradle-git-scm-plugin                                                                                      | Oct 20, 2023 |
+| [gradle-java-cross-compile-plugin](https://github.com/nebula-plugins/gradle-java-cross-compile-plugin)     | Sep 11, 2023 |
+| gradle-metrics-plugin                                                                                      | Jan 15, 2021 |
+| gradle-override-plugin                                                                                     | Nov 27, 2023 |
+| gradle-rxjava-project-plugin                                                                               | Sep 1, 2018  |
+| gradle-scm-plugin                                                                                          | Oct 20, 2023 |
+| gradle-stash-plugin                                                                                        | Sep 26, 2023 |
+| gradle-warnings-plugin                                                                                     | Aug 21, 2018 |
+| lazybones-nebula-plugin-template                                                                           | Aug 14, 2018 |
+| lock-experimental                                                                                          | Aug 21, 2018 |
+| nebula-bintray-plugin                                                                                      | Feb 7, 2021  |
+| nebula-blob-plugin                                                                                         | Aug 21, 2018 |
+| [nebula-core](https://github.com/nebula-plugins/nebula-core)                                               | Mar 1, 2021  |
+| nebula-docker-plugin                                                                                       | Mar 1, 2021  |
+| nebula-grails-plugin                                                                                       | Jul 29, 2022 |
+| [nebula-interactive](https://github.com/nebula-plugins/nebula-interactive)                                 | Aug 28, 2018 |
+| [nebula-kotlin-plugin](https://github.com/nebula-plugins/nebula-kotlin-plugin)                             | Nov 9, 2021  |
+| [nebula-ospackage-plugin](https://github.com/nebula-plugins/nebula-ospackage-plugin)                       | Aug 21, 2018 |
+| [gradle-extra-configurations-plugin](https://github.com/nebula-plugins/gradle-extra-configurations-plugin) | May 7, 2026  |
