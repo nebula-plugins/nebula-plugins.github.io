@@ -23,4 +23,4 @@
   title: Articles
   children:
     - title: Scaling ArchUnit with Nebula ArchRules
-      path: https://netflixtechblog.medium.com/scaling-archunit-with-nebula-archrules-b4642c464c5a
+      url: https://netflixtechblog.medium.com/scaling-archunit-with-nebula-archrules-b4642c464c5a
