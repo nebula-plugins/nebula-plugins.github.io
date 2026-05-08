@@ -19,3 +19,8 @@
     - jconfmexico2020_robertoperezalcolea
     - charlotte_jug_2021_robertoperezalcolea
     - gradle_summit_2025_aubrey_roberto
+-
+  title: Articles
+  children:
+    - title: Scaling ArchUnit with Nebula ArchRules
+      path: https://netflixtechblog.medium.com/scaling-archunit-with-nebula-archrules-b4642c464c5a
