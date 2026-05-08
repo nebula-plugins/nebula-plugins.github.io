@@ -27,11 +27,17 @@
                       {{ navigation_item.title }} <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                      {% for child_page_id in navigation_item.children %}
-                        {% assign child_page = site.pages | where:"id",child_page_id | first %}
-                        <li class="{% if child_page_id == page.id %}active{% endif %}">
-                          <a href="{{ site.baseurl }}{{ child_page.url }}">{{ child_page.title }}</a>
-                        </li>
+                      {% for child in navigation_item.children %}
+                        {% if child.url %}
+                          <li class="active">
+                            <a href="{{ child.url }}">{{ child.title }}</a>
+                          </li>
+                        {% else %}
+                          {% assign child_page = site.pages | where:"id",child | first %}
+                          <li class="{% if child_page_id == page.id %}active{% endif %}">
+                            <a href="{{ site.baseurl }}{{ child_page.url }}">{{ child_page.title }}</a>
+                          </li>
+                        {% endif %}
                       {% endfor %}
                     </ul>
                   </li>
